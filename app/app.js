@@ -5,19 +5,31 @@ var app = angular.module('weddingApp', [
   ]);
 
 // Configure the routes
-app.config(['$routeProvider',
-  function($routeProvider) {
+app.config([
+  '$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
         templateUrl: 'views/home.html',
         controller: 'HomeController'
       })
-      .when('/about', {
-        templateUrl: 'views/about.html',
-        controller: 'AboutController'
+      .when('/weddingparty', {
+        templateUrl: 'views/weddingParty.html',
+        controller: 'WeddingPartyController'
       })
-      .when('/venue', {
-        templateUrl: 'views/venue.html',
-        controller: 'VenueController'
+      .when('/photos', {
+        templateUrl: 'views/photos.html',
+        controller: 'PhotosController'
+      })
+      .when('/info', {
+        templateUrl: 'views/info.html',
+        controller: 'InfoController'
+      })
+      .when('/registry', {
+        templateUrl: 'views/registry.html',
+        controller: 'RegistryController'
+      })
+      .otherwise({
+        templateUrl: 'views/home.html',
+        controller: 'HomeController'
       });
 }]);
