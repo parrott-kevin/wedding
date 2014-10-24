@@ -36,26 +36,37 @@ gulp.task('clean', function() {
 
 // Views task
 gulp.task('views', function() {
-  gulp.src('app/index.html')
+  gulp.src('src/index.html')
     .pipe(gulp.dest('dist/'));
-  gulp.src('app/views/*')
+
+  var files = ['home', 'info', 'photos', 'registry', 'weddingParty'];
+  for(var i = files.length; i >= 0; i--) {
+    gulp.src('src/app/components/' + files[i] + '/*.html')
     .pipe(gulp.dest('dist/views'));
+  }
+  
 });
 
 // Styles task
 gulp.task('styles', function() {
-  gulp.src('app/assets/less/*.less')
+  gulp.src('src/assets/less/*.less')
     .pipe(less())
     .pipe(gulp.dest('dist/css'));
 });
 
 // JS task
 gulp.task('js', function() {
-  gulp.src('app/*.js')
+  gulp.src('src/app/*.js')
     .pipe(gulp.dest('dist/js'));
+
+  var files = ['home', 'info', 'photos', 'registry', 'weddingParty'];
+  for(var i = files.length; i >= 0; i--) {
+    gulp.src('src/app/components/' + files[i] + '/*.js')
+      .pipe(gulp.dest('dist/js'));
+  }
 });
 
-// Copy bower compenents
+// Copy bower components
 gulp.task('copy-bower', function() {
   var bc = 'bower_components/';
   gulp.src([
@@ -76,13 +87,13 @@ gulp.task('copy-bower', function() {
 
 // Watch files for changes  
 gulp.task('watch', function() {
-  gulp.watch(['app/*.js'], [
+  gulp.watch(['src/app/*.js', 'src/app/components/**/*.js'], [
     'js'
   ]);
-  gulp.watch(['app/index.html', 'app/views/*.html'], [
+  gulp.watch(['src/index.html', 'src/app/components/**/*.html'], [
     'views'
   ]);
-  gulp.watch(['app/assets/less/*.less'], [
+  gulp.watch(['src/assets/less/*.less'], [
     'styles'
   ]);
 });

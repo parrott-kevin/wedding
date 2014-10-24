@@ -1,35 +1,30 @@
-// Create the module and name it weddingApp
-var app = angular.module('weddingApp', [
-  'ngRoute',
-  'weddingControllers'
-  ]);
-
-// Configure the routes
-app.config([
+angular
+  .module('weddingApp') 
+  .config([
   '$routeProvider', function($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/homeView.html',
         controller: 'HomeController'
       })
       .when('/weddingparty', {
-        templateUrl: 'views/weddingParty.html',
+        templateUrl: 'views/weddingPartyView.html',
         controller: 'WeddingPartyController'
       })
       .when('/photos', {
-        templateUrl: 'views/photos.html',
+        templateUrl: 'views/photosView.html',
         controller: 'PhotosController'
       })
       .when('/info', {
-        templateUrl: 'views/info.html',
+        templateUrl: 'views/infoView.html',
         controller: 'InfoController'
       })
       .when('/registry', {
-        templateUrl: 'views/registry.html',
+        templateUrl: 'views/registryView.html',
         controller: 'RegistryController'
       })
       .otherwise({
-        templateUrl: 'views/home.html',
+        templateUrl: 'views/homeView.html',
         controller: 'HomeController'
       });
 }]);
