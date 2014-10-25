@@ -39,7 +39,7 @@ gulp.task('views', function() {
   gulp.src('src/index.html')
     .pipe(gulp.dest('dist/'));
 
-  var files = ['home', 'info', 'photos', 'registry', 'weddingParty'];
+  var files = ['home', 'info', 'photos', 'registry', 'wedding-party'];
   for(var i = files.length; i >= 0; i--) {
     gulp.src('src/app/components/' + files[i] + '/*.html')
     .pipe(gulp.dest('dist/views'));
@@ -54,12 +54,17 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('img', function() {
+  gulp.src('src/assets/img/*.jpg')
+    .pipe(gulp.dest('dist/img'));
+});
+
 // JS task
 gulp.task('js', function() {
   gulp.src('src/app/*.js')
     .pipe(gulp.dest('dist/js'));
 
-  var files = ['home', 'info', 'photos', 'registry', 'weddingParty'];
+  var files = ['home', 'info', 'photos', 'registry', 'wedding-party'];
   for(var i = files.length; i >= 0; i--) {
     gulp.src('src/app/components/' + files[i] + '/*.js')
       .pipe(gulp.dest('dist/js'));
@@ -75,6 +80,7 @@ gulp.task('copy-bower', function() {
     bc + 'angular-route/angular-route.min.js',
     bc + 'angular-route/angular-route.min.js.map',
     bc + 'angular-google-maps/dist/angular-google-maps.min.js',
+    bc + 'angular-bootstrap/ui-bootstrap.min.js',
     bc + 'bluebird/js/browser/bluebird.js',
     bc + 'lodash/dist/lodash.min.js'
   ]).pipe(gulp.dest('dist/lib'));

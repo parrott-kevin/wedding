@@ -1,30 +1,37 @@
-angular
-  .module('weddingApp') 
-  .config([
-  '$routeProvider', function($routeProvider) {
+(function() {
+  'use strict';
+  
+  angular
+    .module('app') 
+    .config(routeConfig);
+
+  routeConfig.$inject = ['$routeProvider'];
+
+  function routeConfig($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/homeView.html',
-        controller: 'HomeController'
+        templateUrl: 'views/home.html',
+        controller: 'HomeController',
       })
       .when('/weddingparty', {
-        templateUrl: 'views/weddingPartyView.html',
+        templateUrl: 'views/wedding-party.html',
         controller: 'WeddingPartyController'
       })
       .when('/photos', {
-        templateUrl: 'views/photosView.html',
+        templateUrl: 'views/photos.html',
         controller: 'PhotosController'
       })
       .when('/info', {
-        templateUrl: 'views/infoView.html',
+        templateUrl: 'views/info.html',
         controller: 'InfoController'
       })
       .when('/registry', {
-        templateUrl: 'views/registryView.html',
+        templateUrl: 'views/registry.html',
         controller: 'RegistryController'
       })
       .otherwise({
-        templateUrl: 'views/homeView.html',
-        controller: 'HomeController'
+        redirectTo: '/'
       });
-}]);
+  }
+
+})();
