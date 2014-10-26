@@ -26,6 +26,7 @@ gulp.task('dev', [
 gulp.task('clean', function() {
   del.sync([
     'dist/index.html',
+    'dist/img/*',
     'dist/css/*',
     'dist/fonts/*',
     'dist/lib/*',
@@ -81,6 +82,7 @@ gulp.task('copy-bower', function() {
     bc + 'angular-route/angular-route.min.js.map',
     bc + 'angular-google-maps/dist/angular-google-maps.min.js',
     bc + 'angular-bootstrap/ui-bootstrap.min.js',
+    bc + 'angular-bootstrap/ui-bootstrap-tpls.min.js',
     bc + 'bluebird/js/browser/bluebird.js',
     bc + 'lodash/dist/lodash.min.js'
   ]).pipe(gulp.dest('dist/lib'));
@@ -93,15 +95,9 @@ gulp.task('copy-bower', function() {
 
 // Watch files for changes  
 gulp.task('watch', function() {
-  gulp.watch(['src/app/*.js', 'src/app/components/**/*.js'], [
-    'js'
-  ]);
-  gulp.watch(['src/index.html', 'src/app/components/**/*.html'], [
-    'views'
-  ]);
-  gulp.watch(['src/assets/less/*.less'], [
-    'styles'
-  ]);
+  gulp.watch(['src/app/*.js', 'src/app/components/**/*.js'], ['js']);
+  gulp.watch(['src/index.html', 'src/app/components/**/*.html'], ['views']);
+  gulp.watch(['src/assets/less/*.less'], ['styles']);
 });
 
 gulp.task('default', ['dev', 'webserver', 'watch'], function() {});
