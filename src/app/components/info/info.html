@@ -1,10 +1,24 @@
 <div class="jumbotron text-center">
-  <h1>Info Page</h1>
-  <p>{{message}}</p>
+  <h1>{{title}}</h1>
+</div>
+<div ng-repeat="location in locations">
+  <h2>{{location.title}}</h2>
+    <li>{{location.address}}</li>
+    <li>{{location.city}}, {{location.state}} {{location.zip}}</li>
+    <li>{{location.link}}</li>
 </div>
 <div>
   <ui-gmap-google-map center="map.center" zoom="map.zoom">
-    <ui-gmap-markers models="markers" coords="'self'">
+    <ui-gmap-markers models="markers" coords="'self'" click="'onClick'">
+      <ui-gmap-windows show="show">
+        <div ng-non-bindable>
+          <div>{{title}}</div>
+          <div>{{address}}</div>
+          <div>{{city}}, {{state}} {{zip}}</div>
+          <div><a href={{link}}>Website</a></div>
+          </div>
+        </div>
+      </ui-gmap-windows>
     </ui-gmap-markers>
   </ui-gmap-google-map>
 </div>
