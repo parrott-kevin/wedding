@@ -1,11 +1,17 @@
 <div class="jumbotron text-center">
   <h1>{{title}}</h1>
 </div>
-<div ng-repeat="location in locations">
-  <h2>{{location.title}}</h2>
-    <li>{{location.address}}</li>
-    <li>{{location.city}}, {{location.state}} {{location.zip}}</li>
-    <li>{{location.link}}</li>
+<div ng-repeat="location in locations" class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">{{location.title}}</h3>
+  </div>
+  <div class="panel-body">
+    <address>
+      {{location.address}}<br>
+      {{location.city}}, {{location.state}} {{location.zip}}<br>
+      <a href={{location.link}}>Website</a>
+    </address>
+  </div>
 </div>
 <div>
   <ui-gmap-google-map center="map.center" zoom="map.zoom">

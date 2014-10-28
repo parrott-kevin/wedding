@@ -1,4 +1,27 @@
 <div class="jumbotron text-center">
   <h1>Wedding Party Page</h1>
-  <p>{{message}}</p>
+</div>
+
+<div class="col-md-6">
+  <div class="media" ng-repeat="man in groomsmen">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">{{man.name}}</h4>
+      {{man.content}} 
+    </div>
+  </div>
+</div>
+
+<div class="col-md-6"> 
+  <div class="media" ng-repeat="maid in bridesmaids">
+    <a class="pull-left" href="#">
+      <img class="media-object" src="..." alt="...">
+    </a>
+    <div class="media-body">
+      <h4 class="media-heading">{{maid.name}}</h4>
+      {{maid.content}} 
+    </div>
+  </div>
 </div>

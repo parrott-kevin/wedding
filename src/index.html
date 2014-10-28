@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="app">
+<html lang="en" ng-app="app">
   <head>
     <link rel="stylesheet" href="css/styles.css" />
 
@@ -7,9 +7,8 @@
   </head>
 
   <body>
-    
-    <nav class="navbar navbar-default">
-      <div class="container">
+    <div class="container">
+      <nav class="navbar navbar-default">
         <div class="navbar-header">
           <a class="navbar-brand" href="/">Kevin and Virginia Wedding</a>
         </div>
@@ -17,13 +16,13 @@
           <li><a href="#"><i class="fa fa-home"></i>Home</a></li>
           <li><a href="#photos"><i class="fa fa-camera-retro"></i>Photos</a></li>
           <li><a href="#weddingparty"><i class="fa fa-users"></i>Wedding Party</a></li>
-          <li><a href="#info"><i class="fa fa-info"></i>Info</a></li>
           <li><a href="#registry"><i class="fa fa-gift"></i>Registry</a></li>
+          <li><a href="#info"><i class="fa fa-info"></i>Info</a></li>
         </ul>
-      </div>
-    </nav>
+      </nav>
+    </div>
 
-    <div id="main">
+    <div id="main" class="container">
       <div ng-view></div>
     </div>
     <script src="lib/lodash.min.js" type="text/javascript"></script>
@@ -42,5 +41,6 @@
     <script src="js/photos.controller.js" type="text/javascript"></script>
     <script src="js/registry.controller.js" type="text/javascript"></script>
     <script src="js/wedding-party.controller.js" type="text/javascript"></script>
+
   </body>
 </html>
