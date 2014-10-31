@@ -8,9 +8,11 @@
   WeddingPartyController.$inject = ['$scope'];
 
   function WeddingPartyController($scope) {
-    $scope.groomsmen = [{
+    var vm = this;
+
+    vm.groomsmen = [{
       name: 'Eric Parrott',
-      content: 'lorem ipsum' 
+      content: 'lorem ipsum',
     },
     {
       name: 'Zak Tafelsky',
@@ -33,7 +35,7 @@
       content: 'lorem ipsum'
     }];
 
-    $scope.bridesmaids = [{
+    vm.bridesmaids = [{
       name: 'Annie Schneider',
       content: 'lorem ipsum' 
     },

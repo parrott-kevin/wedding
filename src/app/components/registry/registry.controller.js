@@ -8,6 +8,8 @@
   RegistryController.$inject = ['$scope'];
   
   function RegistryController($scope) {
-      $scope.message = "I'm the registry page"; 
+      var vm = this;
+
+      vm.message = "I'm the registry page"; 
     }
 })();

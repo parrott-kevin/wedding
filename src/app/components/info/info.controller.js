@@ -8,7 +8,9 @@
   InfoController.$inject = ['$scope', 'GoogleMapApi'.ns()];  
 
   function InfoController($scope) {
-    $scope.title = "Information";
+    var vm = this;
+    
+    vm.title = "Information";
 
     var locations = [{
         title: 'Grand Rapids Art Museum',
@@ -31,9 +33,9 @@
         longitude: -85.673271
       }];
 
-    $scope.locations = locations;
+    vm.locations = locations;
 
-    $scope.map = {
+    vm.map = {
       center: {
         latitude: 42.96505,
         longitude: -85.67105
@@ -46,7 +48,7 @@
       markers.push(createMarker(i, locations[i]));
     }
 
-    $scope.markers = markers;
+    vm.markers = markers;
 
     function createMarker(i, location) {
       var marker = {
@@ -61,7 +63,7 @@
         longitude: location.longitude,
         show: false,
         onClick: function() {
-          $scope.show = !$scope.show;
+          vm.show = !vm.show;
         }
       };
 

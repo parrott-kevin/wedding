@@ -12,22 +12,27 @@
       .when('/', {
         templateUrl: 'views/home.html',
         controller: 'HomeController',
+        controllerAs: 'vm'
       })
       .when('/weddingparty', {
         templateUrl: 'views/wedding-party.html',
-        controller: 'WeddingPartyController'
+        controller: 'WeddingPartyController',
+        controllerAs: 'vm'
       })
       .when('/photos', {
         templateUrl: 'views/photos.html',
-        controller: 'PhotosController'
+        controller: 'PhotosController',
+        controllerAs: 'vm'
       })
       .when('/info', {
         templateUrl: 'views/info.html',
-        controller: 'InfoController'
+        controller: 'InfoController',
+        controllerAs: 'vm'
       })
       .when('/registry', {
         templateUrl: 'views/registry.html',
-        controller: 'RegistryController'
+        controller: 'RegistryController',
+        controllerAs: 'vm'
       })
       .otherwise({
         redirectTo: '/'

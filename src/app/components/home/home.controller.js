@@ -8,7 +8,9 @@
   HomeController.$inject = ['$scope'];
 
   function HomeController($scope) {
-    $scope.message = "I'm the home page";
+    var vm = this;
+    
+    vm.message = "I'm the home page";
   }
 
 })();
