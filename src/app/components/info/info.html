@@ -1,5 +1,5 @@
 <div class="jumbotron text-center">
-  <h1>{{title}}</h1>
+  <h1>{{vm.title}}</h1>
 </div>
 <div ng-repeat="location in vm.locations" class="panel panel-default">
   <div class="panel-heading">
@@ -18,11 +18,12 @@
     <ui-gmap-markers models="vm.markers" coords="'self'" click="'onClick'">
       <ui-gmap-windows show="show">
         <div ng-non-bindable>
-          <div>{{title}}</div>
-          <div>{{address}}</div>
-          <div>{{city}}, {{state}} {{zip}}</div>
-          <div><a href={{link}}>Website</a></div>
-          </div>
+          <address>
+            {{title}}<br>
+            {{address}}<br>
+            {{city}}, {{state}} {{zip}}<br>
+            <a href={{link}}>Website</a><br>
+          </address>
         </div>
       </ui-gmap-windows>
     </ui-gmap-markers>

@@ -5,9 +5,9 @@
     .module('wedding-party.controller', [])
     .controller('WeddingPartyController', WeddingPartyController);
 
-  WeddingPartyController.$inject = ['$scope'];
+  WeddingPartyController.$inject = ['$scope', '$http'];
 
-  function WeddingPartyController($scope) {
+  function WeddingPartyController($scope, $http) {
     var vm = this;
 
     vm.groomsmen = [{

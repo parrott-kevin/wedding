@@ -10,27 +10,27 @@
   function routeConfig($routeProvider) {
     $routeProvider
       .when('/', {
-        templateUrl: 'views/home.html',
+        templateUrl: 'app/components/home/home.html',
         controller: 'HomeController',
         controllerAs: 'vm'
       })
       .when('/weddingparty', {
-        templateUrl: 'views/wedding-party.html',
+        templateUrl: 'app/components/wedding-party/wedding-party.html',
         controller: 'WeddingPartyController',
         controllerAs: 'vm'
       })
       .when('/photos', {
-        templateUrl: 'views/photos.html',
+        templateUrl: 'app/components/photos/photos.html',
         controller: 'PhotosController',
         controllerAs: 'vm'
       })
       .when('/info', {
-        templateUrl: 'views/info.html',
+        templateUrl: 'app/components/info/info.html',
         controller: 'InfoController',
         controllerAs: 'vm'
       })
       .when('/registry', {
-        templateUrl: 'views/registry.html',
+        templateUrl: 'app/components/registry/registry.html',
         controller: 'RegistryController',
         controllerAs: 'vm'
       })

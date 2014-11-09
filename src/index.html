@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="app">
   <head>
-    <link rel="stylesheet" href="css/styles.css" />
+    <!-- build:css styles.css -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <!-- endbuild -->
 
     <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkpqYjy3KUgs3KPmHP_0rzbGACoMQ-1Zo"></script>
   </head>
@@ -25,22 +27,31 @@
     <div id="main" class="container">
       <div ng-view></div>
     </div>
-    <script src="lib/lodash.min.js" type="text/javascript"></script>
-    <script src="lib/bluebird.js" type="text/javascript"></script>
 
-    <script src="lib/angular.min.js"  type="text/javascript"></script>
-    <script src="lib/angular-route.min.js" type="text/javascript"></script>
-    <script src="lib/angular-google-maps.min.js" type="text/javascript"></script>
-    <script src="lib/ui-bootstrap.min.js" type="text/javascript"></script>
-    <script src="lib/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
 
-    <script src="js/app.module.js" type="text/javascript"></script> 
-    <script src="js/app.routes.js" type="text/javascript"></script>
-    <script src="js/home.controller.js" type="text/javascript"></script>
-    <script src="js/info.controller.js" type="text/javascript"></script>
-    <script src="js/photos.controller.js" type="text/javascript"></script>
-    <script src="js/registry.controller.js" type="text/javascript"></script>
-    <script src="js/wedding-party.controller.js" type="text/javascript"></script>
+    <!-- build:js /js/lib.js -->
+    <script src="../bower_components/lodash/dist/lodash.min.js" type="text/javascript"></script>
+    <script src="../bower_components/bluebird/js/browser/bluebird.js" type="text/javascript"></script>
+
+    <!-- angular -->
+    <script src="../bower_components/angular/angular.min.js"  type="text/javascript"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js" type="text/javascript"></script>
+
+    <!-- angular-ui -->
+    <script src="../bower_components/angular-google-maps/dist/angular-google-maps.min.js" type="text/javascript"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap.min.js" type="text/javascript"></script>
+    <script src="../bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
+    <!-- endbuild -->
+
+    <!-- build:js1 /js/app.js -->
+    <script src="app/app.module.js" type="text/javascript"></script> 
+    <script src="app/app.routes.js" type="text/javascript"></script>
+    <script src="app/components/home/home.controller.js" type="text/javascript"></script>
+    <script src="app/components/info/info.controller.js" type="text/javascript"></script>
+    <script src="app/components/photos/photos.controller.js" type="text/javascript"></script>
+    <script src="app/components/registry/registry.controller.js" type="text/javascript"></script>
+    <script src="app/components/wedding-party/wedding-party.controller.js" type="text/javascript"></script>
+    <!-- endbuild -->
 
   </body>
 </html>
