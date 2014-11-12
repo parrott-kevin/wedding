@@ -13,6 +13,7 @@
     vm.title = 'Information';
 
     var locations = [{
+        id: 0,
         title: 'Grand Rapids Art Museum',
         address: '101 Monroe Center NW',
         city: 'Grand Rapids',
@@ -20,9 +21,14 @@
         zip: '49503',
         link: 'http://www.artmuseumgr.org/',
         latitude: 42.96505,
-        longitude: -85.67105
+        longitude: -85.67105,
+        show: false,
+        onClick: function() {
+          vm.show = !vm.show;
+        }
       },
       {
+        id: 1,
         title: 'Courtyard Grand Rapids Downtown',
         address: '11 Monroe NW',
         city: 'Grand Rapids',
@@ -30,7 +36,11 @@
         zip: '49503',
         link: 'https://resweb.passkey.com/go/KevinandVirginia',
         latitude: 42.964103,
-        longitude: -85.673271
+        longitude: -85.673271,
+        show: false,
+        onClick: function() {
+          vm.show = !vm.show;
+        }
       }];
 
     vm.locations = locations;
@@ -42,33 +52,6 @@
       },
       zoom: 15
     };
-
-    var markers = [];
-    for (var i = 0; i < locations.length; i++) {
-      markers.push(createMarker(i, locations[i]));
-    }
-
-    vm.markers = markers;
-
-    function createMarker(i, location) {
-      var marker = {
-        id: i,
-        title: location.title,
-        address: location.address,
-        city: location.city,
-        state: location.state,
-        zip: location.zip,
-        link: location.link,
-        latitude: location.latitude,
-        longitude: location.longitude,
-        show: false,
-        onClick: function() {
-          vm.show = !vm.show;
-        }
-      };
-
-      return marker;
-    }
 
   }
 
