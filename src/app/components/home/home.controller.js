@@ -9,9 +9,8 @@
 
   function HomeController($scope) {
     var vm = this;
-    
-    vm.message = "I'm the home page";
+
+    vm.message = 'I\'m the home page';
   }
 
 })();
-

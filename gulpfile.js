@@ -1,17 +1,17 @@
-var gulp = require('gulp'),
-  usemin = require('gulp-usemin'),
-  uglify = require('gulp-uglify'),
-  minifyCss = require('gulp-minify-css'),
-  del = require('del'),
-  less = require('gulp-less'),
-  webserver = require('gulp-webserver');
+var gulp = require('gulp');
+var usemin = require('gulp-usemin');
+var uglify = require('gulp-uglify');
+var minifyCss = require('gulp-minify-css');
+var del = require('del');
+var less = require('gulp-less');
+var webserver = require('gulp-webserver');
 
 // Start webserver
 gulp.task('webserver', function() {
   gulp.src('')
     .pipe(webserver({
       livereload: true,
-      open: 'src' 
+      open: 'src'
     }));
 });
 
@@ -28,7 +28,7 @@ gulp.task('clean:dev', function() {
 // Views task
 gulp.task('views', function() {
   var files = ['home', 'info', 'photos', 'registry', 'wedding-party'];
-  for(var i = files.length; i >= 0; i--) {
+  for (var i = files.length; i >= 0; i--) {
     gulp.src('src/app/components/' + files[i] + '/*.html')
     .pipe(gulp.dest('dist/views'));
   }
@@ -41,7 +41,7 @@ gulp.task('img', function() {
 // Copy fonts for dist
 gulp.task('fonts:build', function() {
   gulp.src([
-    'bower_components/bootstrap/fonts/*', 
+    'bower_components/bootstrap/fonts/*',
     'bower_components/fontawesome/fonts/*'
   ])
     .pipe(gulp.dest('dist/fonts'));
@@ -50,7 +50,7 @@ gulp.task('fonts:build', function() {
 // Copy fonts for dev
 gulp.task('fonts:dev', function() {
   gulp.src([
-    'bower_components/bootstrap/fonts/*', 
+    'bower_components/bootstrap/fonts/*',
     'bower_components/fontawesome/fonts/*'
   ])
     .pipe(gulp.dest('src/assets/fonts'));
@@ -73,7 +73,7 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('src/assets/css'));
 });
 
-// Watch files for changes  
+// Watch files for changes
 gulp.task('watch', function() {
   gulp.watch(['src/assets/less/*.less'], ['styles']);
 });

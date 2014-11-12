@@ -1,16 +1,16 @@
 (function() {
   'use strict';
-  
+
   angular
     .module('info.controller', ['google-maps'.ns()])
     .controller('InfoController', InfoController);
 
-  InfoController.$inject = ['$scope', 'GoogleMapApi'.ns()];  
+  InfoController.$inject = ['$scope', 'GoogleMapApi'.ns()];
 
   function InfoController($scope) {
     var vm = this;
-    
-    vm.title = "Information";
+
+    vm.title = 'Information';
 
     var locations = [{
         title: 'Grand Rapids Art Museum',
@@ -42,7 +42,7 @@
       },
       zoom: 15
     };
-    
+
     var markers = [];
     for (var i = 0; i < locations.length; i++) {
       markers.push(createMarker(i, locations[i]));
@@ -71,7 +71,5 @@
     }
 
   }
-
-
 
 })();

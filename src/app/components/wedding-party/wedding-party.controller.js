@@ -16,7 +16,7 @@
     },
     {
       name: 'Zak Tafelsky',
-      content: 'lorem ipsum' 
+      content: 'lorem ipsum'
     },
     {
       name: 'Ian Minter',
@@ -37,11 +37,11 @@
 
     vm.bridesmaids = [{
       name: 'Annie Schneider',
-      content: 'lorem ipsum' 
+      content: 'lorem ipsum'
     },
     {
       name: 'Mary Motta',
-      content: 'lorem ipsum' 
+      content: 'lorem ipsum'
     },
     {
       name: 'Lisa Dubouis',
@@ -57,12 +57,8 @@
     },
     {
       name: 'Nicole Parrott',
-      content: 'lorem ipsum' 
+      content: 'lorem ipsum'
     }];
-
-
-
   }
 
-   
 })();
