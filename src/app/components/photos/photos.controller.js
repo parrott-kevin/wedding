@@ -17,7 +17,7 @@
     vm.addSlide = function() {
       var n = Math.floor(Math.random() * (10 - 1) + 1);
       slides.push({
-        image: 'http://lorempixel.com/g/600/400/animals/' + n
+        image: 'http://www.placecage.com/c/600/400'
       });
     };
 
