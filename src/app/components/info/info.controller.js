@@ -23,6 +23,9 @@
         latitude: 42.96505,
         longitude: -85.67105,
         show: false,
+        windowOptions: {
+          maxWidth: 200
+        },
         onClick: function() {
           vm.show = !vm.show;
         }
@@ -38,6 +41,9 @@
         latitude: 42.964103,
         longitude: -85.673271,
         show: false,
+        windowOptions: {
+          maxWidth: 200
+        },
         onClick: function() {
           vm.show = !vm.show;
         }

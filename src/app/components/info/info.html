@@ -16,8 +16,8 @@
 <div>
   <ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
     <ui-gmap-markers models="vm.locations" coords="'self'" click="'onClick'">
-      <ui-gmap-windows show="show">
-        <div ng-non-bindable>
+      <ui-gmap-windows show="show" options="windowOptions">
+        <div ng-non-bindable class="info-window">
           <address>
             {{title}}<br>
             {{address}}<br>
