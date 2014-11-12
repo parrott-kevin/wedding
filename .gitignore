@@ -2,3 +2,5 @@ bower_components
 node_modules
 dist
 src/assets/img
+src/assets/css
+src/assets/fonts
