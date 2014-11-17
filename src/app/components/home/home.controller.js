@@ -11,6 +11,9 @@
     var vm = this;
 
     vm.message = 'I\'m the home page';
+    vm.image = {
+      src: './assets/img/DSC_5132.jpg'
+    };
   }
 
 })();

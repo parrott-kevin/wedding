@@ -1,27 +1,29 @@
-<div class="jumbotron text-center">
-  <h1>Wedding Party Page</h1>
-</div>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Wedding Party Page</h1>
+  </div>
 
-<div class="col-md-6">
-  <div class="media" ng-repeat="man in vm.groomsmen">
-    <a class="pull-left" href="#">
-      <img class="media-object" src="http://lorempixel.com/g/150/150/animals" alt="...">
-    </a>
-    <div class="media-body">
-      <h4 class="media-heading">{{man.name}}</h4>
-      {{man.content}} 
+  <div class="col-md-6">
+    <div class="media" ng-repeat="man in vm.groomsmen">
+      <a class="pull-left" href="#">
+        <img class="media-object" src="http://lorempixel.com/g/150/150/animals" alt="...">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">{{man.name}}</h4>
+        {{man.content}}
+      </div>
     </div>
   </div>
-</div>
 
-<div class="col-md-6"> 
-  <div class="media" ng-repeat="maid in vm.bridesmaids">
-    <a class="pull-left" href="#">
-      <img class="media-object" src="http://lorempixel.com/g/150/150/cats" alt="...">
-    </a>
-    <div class="media-body">
-      <h4 class="media-heading">{{maid.name}}</h4>
-      {{maid.content}} 
+  <div class="col-md-6">
+    <div class="media" ng-repeat="maid in vm.bridesmaids">
+      <a class="pull-left" href="#">
+        <img class="media-object" src="http://lorempixel.com/g/150/150/cats" alt="...">
+      </a>
+      <div class="media-body">
+        <h4 class="media-heading">{{maid.name}}</h4>
+        {{maid.content}}
+      </div>
     </div>
   </div>
 </div>

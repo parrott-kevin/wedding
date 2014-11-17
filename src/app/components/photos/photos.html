@@ -1,11 +1,13 @@
-<div class="jumbotron text-center">
-  <h1>Photos Page</h1>
-  <p>{{vm.message}}</p>
-</div>
-<div>
-  <carousel>
-    <slide ng-repeat="slide in vm.slides" active="slide.active">
-      <img ng-src="{{slide.image}}" style="margin:auto;">
-    </slide>
-  </carousel>
+<div class="container">
+  <div class="jumbotron text-center">
+    <h1>Photos Page</h1>
+    <p>{{vm.message}}</p>
+  </div>
+  <div>
+    <carousel>
+      <slide ng-repeat="slide in vm.slides" active="slide.active">
+        <img ng-src="{{slide.image}}" style="margin:auto;">
+      </slide>
+    </carousel>
+  </div>
 </div>
