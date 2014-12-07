@@ -81,9 +81,9 @@ gulp.task('watch', function() {
 // Build task
 gulp.task('build', [
   'clean:build',
+  'fonts:build',
   'usemin',
   'views',
-  'fonts:build',
   ], function() {}
 );
 
