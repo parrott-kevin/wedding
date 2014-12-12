@@ -9,6 +9,10 @@
       'photos.controller',
       'registry.controller',
       'wedding-party.controller'
-    ]);
+    ])
+    .constant('_', window._)
+    .run(function($rootScope) {
+      $rootScope._ = window._;
+    });
 
 })();
