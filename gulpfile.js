@@ -2,12 +2,33 @@ var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
+var replace = require('gulp-replace');
 var del = require('del');
 var less = require('gulp-less');
 var webserver = require('gulp-webserver');
 
-// Start webserver
-gulp.task('webserver', function() {
+//---------------------------------------------------------------------------//
+// Common Tasks
+//---------------------------------------------------------------------------//
+
+// Styles task
+gulp.task('styles', function() {
+  gulp.src('src/assets/less/*.less')
+    .pipe(less())
+    .pipe(gulp.dest('src/assets/css'));
+});
+
+// Watch files for changes
+gulp.task('watch', function() {
+  gulp.watch(['src/assets/less/*.less'], ['styles']);
+});
+
+//---------------------------------------------------------------------------//
+// Tasks for running dev
+//---------------------------------------------------------------------------//
+
+// Start webserver for dev
+gulp.task('webserver:dev', function() {
   gulp.src('')
     .pipe(webserver({
       livereload: true,
@@ -15,14 +36,46 @@ gulp.task('webserver', function() {
     }));
 });
 
-// Clean task for dist
-gulp.task('clean:build', function() {
-  del.sync(['dist/*']);
-});
-
 // Clean task for dev
 gulp.task('clean:dev', function() {
   del.sync(['src/assets/css/*', 'src/assets/fonts/*']);
+});
+
+// Copy fonts for dev
+gulp.task('fonts:dev', function() {
+  gulp.src([
+    'bower_components/bootstrap/fonts/*',
+    'bower_components/fontawesome/fonts/*'
+  ])
+    .pipe(gulp.dest('src/assets/fonts'));
+});
+
+// Dev task
+gulp.task('dev', [
+  'clean:dev',
+  'styles',
+  'fonts:dev',
+  'webserver:dev',
+  'watch'
+  ], function() {}
+);
+
+//---------------------------------------------------------------------------//
+// Tasks for running a build
+//---------------------------------------------------------------------------//
+
+// Start webserver for build
+gulp.task('webserver:build', function() {
+  gulp.src('')
+    .pipe(webserver({
+      livereload: true,
+      open: 'dist'
+    }));
+});
+
+// Clean task for dist
+gulp.task('clean:build', function() {
+  del.sync(['dist/*']);
 });
 
 // Views task
@@ -32,6 +85,13 @@ gulp.task('views', function() {
     gulp.src('src/app/components/' + files[i] + '/*.html')
     .pipe(gulp.dest('dist/views'));
   }
+});
+
+// Replace dev routes with dist routes
+gulp.task('replace', function() {
+  gulp.src('dist/js/app.js')
+    .pipe(replace(/(app\/components\/)+.+\//g, '../views/'))
+    .pipe(gulp.dest('dist/js/'));
 });
 
 // Images task
@@ -47,15 +107,6 @@ gulp.task('fonts:build', function() {
     .pipe(gulp.dest('dist/fonts'));
 });
 
-// Copy fonts for dev
-gulp.task('fonts:dev', function() {
-  gulp.src([
-    'bower_components/bootstrap/fonts/*',
-    'bower_components/fontawesome/fonts/*'
-  ])
-    .pipe(gulp.dest('src/assets/fonts'));
-});
-
 // Usemin
 gulp.task('usemin', function() {
   gulp.src('./src/index.html')
@@ -66,32 +117,13 @@ gulp.task('usemin', function() {
     .pipe(gulp.dest('dist'));
 });
 
-// Styles task
-gulp.task('styles', function() {
-  gulp.src('src/assets/less/*.less')
-    .pipe(less())
-    .pipe(gulp.dest('src/assets/css'));
-});
-
-// Watch files for changes
-gulp.task('watch', function() {
-  gulp.watch(['src/assets/less/*.less'], ['styles']);
-});
-
 // Build task
 gulp.task('build', [
   'clean:build',
   'fonts:build',
   'usemin',
   'views',
-  ], function() {}
-);
-
-gulp.task('dev', [
-  'clean:dev',
-  'styles',
-  'fonts:dev',
-  'webserver',
-  'watch'
+  'replace',
+  // 'webserver:build'
   ], function() {}
 );

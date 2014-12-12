@@ -2,10 +2,10 @@
   'use strict';
 
   angular
-    .module('info.controller', ['google-maps'.ns()])
+    .module('info.controller', ['uiGmapgoogle-maps'])
     .controller('InfoController', InfoController);
 
-  InfoController.$inject = ['$scope', 'GoogleMapApi'.ns()];
+  InfoController.$inject = ['$scope'];//, 'GoogleMapApi'.ns()];
 
   function InfoController($scope) {
     var vm = this;
