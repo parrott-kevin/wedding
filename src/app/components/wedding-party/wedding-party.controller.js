@@ -13,7 +13,7 @@
     vm.groomsmen = [{
       name: 'Eric Parrott',
       pic: './assets/img/Eric Par.jpg',
-      meet: 'When the little shit came home from the hospital',
+      meet: 'When the he came home from the hospital',
       xp: 'Weekend in Colorado downhill mountain biking'
     },
     {

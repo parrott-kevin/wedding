@@ -1,20 +1,23 @@
 <div class="container">
-  <div class="jumbotron text-center">
-    <h1>{{vm.title}}</h1>
+  <div class="page-header text-center">
+    <h2>Information</h2>
   </div>
-  <div ng-repeat="location in vm.locations" class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title">{{location.title}}</h3>
-    </div>
-    <div class="panel-body">
-      <address>
-        {{location.address}}<br>
-        {{location.city}}, {{location.state}} {{location.zip}}<br>
-        <a href={{location.link}}>Website</a>
-      </address>
+
+  <div class="col-xs-6 col-md-4">
+    <div ng-repeat="location in vm.locations" class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title">{{location.title}}</h3>
+      </div>
+      <div class="panel-body">
+        <address>
+          {{location.address}}<br>
+          {{location.city}}, {{location.state}} {{location.zip}}<br>
+          <a href={{location.link}}>Website</a>
+        </address>
+      </div>
     </div>
   </div>
-  <div>
+  <div class="col-xs-12 col-md-8">
     <ui-gmap-google-map center="vm.map.center" zoom="vm.map.zoom">
       <ui-gmap-markers models="vm.locations" coords="'self'" click="'onClick'">
         <ui-gmap-windows show="show" options="windowOptions">

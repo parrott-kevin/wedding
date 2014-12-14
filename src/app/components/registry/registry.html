@@ -1,6 +1,12 @@
 <div class="container">
-  <div class="jumbotron text-center">
-    <h1>Registry Page</h1>
-    <p>{{vm.message}}</p>
+  <div class="page-header text-center">
+    <h2>Registry</h2>
   </div>
-</div>
+
+  <div class="row">
+    <div class="col-md-4" ng-repeat="store in vm.stores">
+      <a class="thumbnail" href={{store.link}}>
+        <img style="width: 120px; height: 120px;" data-src={{store.pic}} alt={{store.name}}>
+      </a>
+    </div>
+  </div>

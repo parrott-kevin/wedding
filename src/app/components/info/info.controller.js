@@ -10,8 +10,6 @@
   function InfoController($scope) {
     var vm = this;
 
-    vm.title = 'Information';
-
     var locations = [{
         id: 0,
         title: 'Grand Rapids Art Museum',

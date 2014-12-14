@@ -10,6 +10,20 @@
   function RegistryController($scope) {
       var vm = this;
 
-      vm.message = 'I\'m the registry page';
+      vm.stores = [{
+        name: 'Target',
+        pic: '',
+        link: 'http://www.target.com'
+      },
+      {
+        name: 'West Elm',
+        pic: '',
+        link: 'http://www.westelm.com'
+      },
+      {
+        name: 'Williams and Sonoma',
+        pic: '',
+        link: 'http://www.williams-sonoma.com/'
+      }];
     }
 })();
