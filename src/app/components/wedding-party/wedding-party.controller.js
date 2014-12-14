@@ -12,64 +12,76 @@
 
     vm.groomsmen = [{
       name: 'Eric Parrott',
-      content: 'lorem ipsum',
-      pic: './assets/img/Eric Par.jpg'
+      pic: './assets/img/Eric Par.jpg',
+      meet: 'When the little shit came home from the hospital',
+      xp: 'Weekend in Colorado downhill mountain biking'
     },
     {
       name: 'Zak Tafelsky',
-      content: 'lorem ipsum',
-      pic: './assets/img/Zak.jpg'
+      pic: './assets/img/Zak.jpg',
+      meet: 'At the VanAndel Public Museum for a birthday party',
+      xp: 'Living together in a decrepit house and convincing all of our roommates that Oblivion is amazing.'
     },
     {
       name: 'Ian Minter',
-      content: 'lorem ipsum',
-      pic: './assets/img/Ian.jpg'
+      pic: './assets/img/Ian.jpg',
+      meet: 'At a his going away to Houston party (even though I never met him before and was just tagging along, come to find out he loves it when people do this)',
+      xp: 'Pedal Party Houston'
     },
     {
       name: 'Jordan Kokot',
-      content: 'lorem ipsum',
-      pic: './assets/img/Jordan.jpg'
+      pic: './assets/img/Jordan.jpg',
+      meet: 'Fourth grade, new kid introductions',
+      xp: 'Rampaging through Kamchatka due previous transgressions'
     },
     {
       name: 'Eric Priestly',
-      content: 'lorem ipsum',
-      pic: './assets/img/Eric Pre.jpg'
+      pic: './assets/img/Eric Pre.jpg',
+      meet: 'Via window at Bubble Island',
+      xp: 'Late night bike rides through Ann Arbor'
     },
     {
       name: 'Nick Schneider',
-      content: 'lorem ipsum',
-      pic: './assets/img/Nick.jpg'
+      pic: './assets/img/Nick.jpg',
+      meet: 'Gin\'s Graduation',
+      xp: '...'
     }];
 
     vm.bridesmaids = [{
       name: 'Annie Schneider',
-      content: 'lorem ipsum',
-      pic: './assets/img/Annie.jpg'
+      pic: './assets/img/Annie.jpg',
+      meet: 'We were babies, probably pooping our pants in our mother\'s arms',
+      xp: 'Performing highly rated family variety shows in living rooms and basements across St. Clair county.'
     },
     {
       name: 'Mary Motta',
-      content: 'lorem ipsum',
-      pic: './assets/img/Mary.jpg'
+      pic: './assets/img/Mary.jpg',
+      meet: 'We were babies, probably crawling around fascinated by the existence of the floor.',
+      xp: 'Ran an underground jewelry trade until locals shut us down.'
     },
     {
-      name: 'Lisa Dubouis',
-      content: 'lorem ipsum',
-      pic: './assets/img/Lisa.jpg'
+      name: 'Lisa Dubois',
+      pic: './assets/img/Lisa.jpg',
+      meet: 'The workplace',
+      xp: 'We once brought an entire bar of strangers together through the talent of Lisa’s voice, our interpretive dance, and Journey’s inescapable pull.'
     },
     {
       name: 'Ellen Mey',
-      content: 'lorem ipsum',
-      pic: './assets/img/Ellen.jpg'
+      pic: './assets/img/Ellen.jpg',
+      meet: 'The playground',
+      xp: 'While members of the exclusive nomrom club they wrote/performed big hits at band camp.'
     },
     {
       name: 'Stephanie Hrisca',
-      content: 'lorem ipsum',
-      pic: './assets/img/Steph.jpg'
+      pic: './assets/img/Steph.jpg',
+      meet: 'The playground',
+      xp: 'We once filled Stephanie’s entire swimsuit with sand. It was a true representation of how far humanity has come.'
     },
     {
       name: 'Nicole Parrott',
-      content: 'lorem ipsum',
-      pic: './assets/img/Nicole.jpg'
+      pic: './assets/img/Nicole.jpg',
+      meet: 'Dinner with Kevin\'s family',
+      xp: 'Visited an aquarium with a white tiger and petted stingrays'
     }];
   }
 
