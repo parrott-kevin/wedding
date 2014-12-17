@@ -5,9 +5,9 @@
     .module('home.controller', [])
     .controller('HomeController', HomeController);
 
-  HomeController.$inject = ['$scope'];
+  HomeController.$inject = [];
 
-  function HomeController($scope) {
+  function HomeController() {
     var vm = this;
 
     vm.message = 'I\'m the home page';

@@ -5,9 +5,9 @@
     .module('registry.controller', [])
     .controller('RegistryController', RegistryController);
 
-  RegistryController.$inject = ['$scope'];
+  RegistryController.$inject = [];
 
-  function RegistryController($scope) {
+  function RegistryController() {
       var vm = this;
 
       vm.stores = [{

@@ -5,12 +5,12 @@
     .module('info.controller', ['uiGmapgoogle-maps'])
     .controller('InfoController', InfoController);
 
-  InfoController.$inject = ['$scope'];//, 'GoogleMapApi'.ns()];
+  InfoController.$inject = [];//, 'GoogleMapApi'.ns()];
 
-  function InfoController($scope) {
+  function InfoController() {
     var vm = this;
 
-    var locations = [{
+    vm.locations = [{
         id: 0,
         title: 'Grand Rapids Art Museum',
         address: '101 Monroe Center NW',
@@ -46,8 +46,6 @@
           vm.show = !vm.show;
         }
       }];
-
-    vm.locations = locations;
 
     vm.map = {
       center: {

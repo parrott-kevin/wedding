@@ -5,9 +5,9 @@
     .module('photos.controller', ['ui.bootstrap'])
     .controller('PhotosController', PhotosController);
 
-  PhotosController.$inject = ['$scope', '_'];
+  PhotosController.$inject = ['_'];
 
-  function PhotosController($scope, _) {
+  function PhotosController(_) {
     var vm = this;
     vm.message = 'I\'m the photos page';
     var n = ['100', '200', '300', '400'];
