@@ -12,17 +12,17 @@
 
       vm.stores = [{
         name: 'Target',
-        pic: '',
+        pic: 'https://corporate.target.com/_ui/img/global/target-bullseye.png',
         link: 'http://www.target.com'
       },
       {
         name: 'West Elm',
-        pic: '',
+        pic: 'http://www.westelm.com/weimgs/ab/images/i/201450/0034/images/common/logo_we.png',
         link: 'http://www.westelm.com'
       },
       {
         name: 'Williams and Sonoma',
-        pic: '',
+        pic: 'http://www.williams-sonoma.com/wsimgs/ab/images/i/201451/0004/images/common/logo.svg',
         link: 'http://www.williams-sonoma.com/'
       }];
     }

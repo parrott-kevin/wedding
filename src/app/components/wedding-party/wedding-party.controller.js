@@ -19,5 +19,4 @@
         vm.bridesmaids = data;
       });
   }
-
 })();
