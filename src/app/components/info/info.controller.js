@@ -5,7 +5,7 @@
     .module('info.controller', ['uiGmapgoogle-maps'])
     .controller('InfoController', InfoController);
 
-  InfoController.$inject = [];//, 'GoogleMapApi'.ns()];
+  InfoController.$inject = [];
 
   function InfoController() {
     var vm = this;
