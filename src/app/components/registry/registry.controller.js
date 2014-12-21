@@ -10,19 +10,20 @@
   function RegistryController() {
       var vm = this;
 
-      vm.stores = [{
-        name: 'Target',
-        pic: 'https://corporate.target.com/_ui/img/global/target-bullseye.png',
-        link: 'http://www.target.com'
-      },
+      vm.stores = [
       {
         name: 'West Elm',
-        pic: 'http://www.westelm.com/weimgs/ab/images/i/201450/0034/images/common/logo_we.png',
+        pic: './assets/img/logo.west-elm.png',
         link: 'http://www.westelm.com'
       },
       {
+        name: 'Target',
+        pic: './assets/img/logo.target.png',
+        link: 'http://www.target.com'
+      },
+      {
         name: 'Williams and Sonoma',
-        pic: 'http://www.williams-sonoma.com/wsimgs/ab/images/i/201451/0004/images/common/logo.svg',
+        pic: './assets/img/logo.williams-sonoma.svg',
         link: 'http://www.williams-sonoma.com/'
       }];
     }

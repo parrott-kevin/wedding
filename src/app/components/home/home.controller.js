@@ -12,7 +12,7 @@
 
     vm.message = 'I\'m the home page';
     vm.image = {
-      src: './assets/img/1front.jpg'
+      src: './assets/img/home.jpg'
     };
   }
 

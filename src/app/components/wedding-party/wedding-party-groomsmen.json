@@ -1,36 +1,36 @@
 [{
   "name": "Eric Parrott",
-  "pic": "./assets/img/Eric Par.jpg",
+  "pic": "./assets/img/eric-par.jpg",
   "meet": "When the he came home from the hospital",
   "xp": "Weekend in Colorado downhill mountain biking"
 },
   {
     "name": "Zak Tafelsky",
-    "pic": "./assets/img/Zak.jpg",
+    "pic": "./assets/img/zak.jpg",
     "meet": "At the VanAndel Public Museum for a birthday party",
     "xp": "Living together in a decrepit house and convincing all of our roommates that Oblivion is amazing."
   },
   {
     "name": "Ian Minter",
-    "pic": "./assets/img/Ian.jpg",
+    "pic": "./assets/img/ian.jpg",
     "meet": "At a his going away to Houston party (even though I never met him before and was just tagging along, come to find out he loves it when people do this)",
     "xp": "Pedal Party Houston"
   },
   {
     "name": "Jordan Kokot",
-    "pic": "./assets/img/Jordan.jpg",
+    "pic": "./assets/img/jordan.jpg",
     "meet": "Fourth grade, new kid introductions",
     "xp": "Rampaging through Kamchatka due previous transgressions"
   },
   {
     "name": "Eric Priestly",
-    "pic": "./assets/img/Eric Pre.jpg",
+    "pic": "./assets/img/eric-pre.jpg",
     "meet": "Via window at Bubble Island",
     "xp": "Late night bike rides through Ann Arbor"
   },
   {
     "name": "Nick Schneider",
-    "pic": "./assets/img/Nick.jpg",
+    "pic": "./assets/img/nick.jpg",
     "meet": "Gin's Graduation",
     "xp": "..."
   }]
