@@ -10,11 +10,10 @@
   function PhotosController(_) {
     var vm = this;
     vm.message = 'I\'m the photos page';
-    var n = ['100', '200', '300', '400'];
-    vm.slides = _.map(n, function(i) {
-      return {image: 'http://placehold.it/940x' + i};
+    var imageNames = ['0', '1', '2', '3', '4'];
+    vm.slides = _.map(imageNames, function(i) {
+      return {image: './assets/img/slideshow/' + i + '.png'};
     });
-
   }
 
 })();
