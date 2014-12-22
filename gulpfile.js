@@ -8,12 +8,35 @@ var less = require('gulp-less');
 var webserver = require('gulp-webserver');
 
 //---------------------------------------------------------------------------//
+// Compilation Tasks
+//---------------------------------------------------------------------------//
+
+// Dev task
+gulp.task('dev', [
+  'clean:dev',
+  'styles',
+  'fonts:dev',
+  'webserver:dev',
+  'watch'
+  ], function() {}
+);
+
+// Build task
+gulp.task('build', [
+  'clean:build',
+  'copy:build',
+  'usemin',
+  //'webserver:build'
+  ], function() {}
+);
+
+//---------------------------------------------------------------------------//
 // Common Tasks
 //---------------------------------------------------------------------------//
 
 // Styles task
 gulp.task('styles', function() {
-  gulp.src('src/assets/less/*.less')
+  gulp.src('src/assets/less/styles.less')
     .pipe(less())
     .pipe(gulp.dest('src/assets/css'));
 });
@@ -50,16 +73,6 @@ gulp.task('fonts:dev', function() {
     .pipe(gulp.dest('src/assets/fonts'));
 });
 
-// Dev task
-gulp.task('dev', [
-  'clean:dev',
-  'styles',
-  'fonts:dev',
-  'webserver:dev',
-  'watch'
-  ], function() {}
-);
-
 //---------------------------------------------------------------------------//
 // Tasks for running a build
 //---------------------------------------------------------------------------//
@@ -78,33 +91,31 @@ gulp.task('clean:build', function() {
   del.sync(['dist/*']);
 });
 
-// Views task
-gulp.task('views', function() {
-  var files = ['home', 'info', 'photos', 'registry', 'wedding-party'];
-  for (var i = files.length; i >= 0; i--) {
-    gulp.src('src/app/components/' + files[i] + '/*.html')
-    .pipe(gulp.dest('dist/views'));
-  }
-});
+// Copy files for dist
+gulp.task('copy:build', function() {
 
-// Replace dev routes with dist routes
-gulp.task('replace', function() {
-  gulp.src('dist/js/app.js')
-    .pipe(replace(/(app\/components\/)+.+\//g, '../views/'))
-    .pipe(gulp.dest('dist/js/'));
-});
+  // html
+  gulp.src('src/app/**/*.html')
+    .pipe(gulp.dest('dist/app/'));
 
-// Images task
-gulp.task('img', function() {
-});
+  // json
+  gulp.src('src/app/**/*.json')
+    .pipe(gulp.dest('dist/app/'));
 
-// Copy fonts for dist
-gulp.task('fonts:build', function() {
+  // css
+  //gulp.src('src/assets/css/styles.css')
+  //  .pipe(gulp.dest('dist/assets/css/'));
+
+  // images
+  gulp.src('src/assets/img/**/*')
+    .pipe(gulp.dest('dist/assets/img/'));
+
+  // fonts
   gulp.src([
     'bower_components/bootstrap/fonts/*',
     'bower_components/fontawesome/fonts/*'
   ])
-    .pipe(gulp.dest('dist/fonts'));
+    .pipe(gulp.dest('dist/assets/fonts/'));
 });
 
 // Usemin
@@ -116,14 +127,3 @@ gulp.task('usemin', function() {
     }))
     .pipe(gulp.dest('dist'));
 });
-
-// Build task
-gulp.task('build', [
-  'clean:build',
-  'fonts:build',
-  'usemin',
-  'views',
-  'replace',
-  // 'webserver:build'
-  ], function() {}
-);

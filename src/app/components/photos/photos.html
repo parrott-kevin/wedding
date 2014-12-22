@@ -1,11 +1,8 @@
 <div class="container">
-  <div class="page-header text-center">
-    <h2>Photos</h2>
-  </div>
   <div>
-    <carousel>
+    <carousel style="height: 50%; width: 50%;" class="center-block">
       <slide ng-repeat="slide in vm.slides" active="slide.active">
-        <img ng-src="{{slide.image}}" style="margin:auto;">
+        <img ng-src="{{slide.image}}" >
       </slide>
     </carousel>
   </div>
