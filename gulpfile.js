@@ -2,7 +2,6 @@ var gulp = require('gulp');
 var usemin = require('gulp-usemin');
 var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
-var replace = require('gulp-replace');
 var del = require('del');
 var less = require('gulp-less');
 var webserver = require('gulp-webserver');
@@ -25,8 +24,7 @@ gulp.task('dev', [
 gulp.task('build', [
   'clean:build',
   'copy:build',
-  'usemin',
-  //'webserver:build'
+  'usemin'
   ], function() {}
 );
 
@@ -41,7 +39,16 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('src/assets/css'));
 });
 
-// Watch files for changes
+// UnCSS task
+gulp.task('uncss', function() {
+  gulp.src('src/assets/css/styles.css')
+    .pipe(uncss({
+      html: glob.sync('src/**/*.html')
+    }))
+    .pipe(gulp.dest('src/assets/css'));
+});
+
+// Watch less files for changes
 gulp.task('watch', function() {
   gulp.watch(['src/assets/less/*.less'], ['styles']);
 });
