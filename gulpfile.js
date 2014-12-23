@@ -39,15 +39,6 @@ gulp.task('styles', function() {
     .pipe(gulp.dest('src/assets/css'));
 });
 
-// UnCSS task
-gulp.task('uncss', function() {
-  gulp.src('src/assets/css/styles.css')
-    .pipe(uncss({
-      html: glob.sync('src/**/*.html')
-    }))
-    .pipe(gulp.dest('src/assets/css'));
-});
-
 // Watch less files for changes
 gulp.task('watch', function() {
   gulp.watch(['src/assets/less/*.less'], ['styles']);
