@@ -4,6 +4,7 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var del = require('del');
 var less = require('gulp-less');
+var shell = require('gulp-shell');
 var webserver = require('gulp-webserver');
 
 //---------------------------------------------------------------------------//
@@ -43,6 +44,9 @@ gulp.task('styles', function() {
 gulp.task('watch', function() {
   gulp.watch(['src/assets/less/*.less'], ['styles']);
 });
+
+// Publish to Github Pages
+gulp.task('gh-pages', shell.task('git subtree push --prefix dist origin gh-pages'));
 
 //---------------------------------------------------------------------------//
 // Tasks for running dev

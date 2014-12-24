@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="app">
+  <head>
+    <link rel="stylesheet" href="assets/css/styles.css"/>
+
+    <!-- fonts -->
+    <link href='http://fonts.googleapis.com/css?family=Tangerine:700' rel='stylesheet' type='text/css'>
+
+    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBkpqYjy3KUgs3KPmHP_0rzbGACoMQ-1Zo"></script>
+  </head>
+
+  <body>
+    <div>
+      <h1 class="text-center" style="font-family: 'Tangerine', cursive;">Virginia and Kevin</h1>
+    </div>
+    <nav>
+      <div class="container">
+        <ul class="nav nav-pills nav-justified page-header">
+          <li><a href="#" style="color: #000000"><i class="fa fa-home"></i><br>Home</a></li>
+          <li><a href="#photos" style="color: #000000"><i class="fa fa-camera-retro"></i><br>Photos</a></li>
+          <li><a href="#weddingparty" style="color: #000000"><i class="fa fa-users"></i><br>Wedding Party</a></li>
+          <li><a href="#registry" style="color: #000000"><i class="fa fa-gift"></i><br>Registry</a></li>
+          <li><a href="#info" style="color: #000000"><i class="fa fa-info"></i><br>Info</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <br>
+
+    <div id="main">
+      <div ng-view></div>
+    </div>
+
+    <script src="js/lib.js"></script>
+
+    <script src="js/app.js"></script>
+
+  </body>
+  <footer>
+  </footer>
+</html>
