@@ -118,7 +118,7 @@
         state: 'MI',
         zip: '49503',
         link: 'https://resweb.passkey.com/go/KevinandVirginia',
-        info: 'We have a block of rooms reserved at the Courtyard Marriott across the street from the GRAM. Rooms can be booked by phone or through the link below. If you are booking by phone, please call their toll free number 877-901-6632 and reference “Schneider-Parrott Wedding Block”. We will also be providing free parking passes to anyone driving to the GRAM.',
+        info: 'The above link leads to a block of rooms reserved at the Courtyard Marriott across the street from the GRAM. Rooms can be booked by phone or through the link below. If you are booking by phone, please call their toll free number 877-901-6632 and reference “Schneider-Parrott Wedding Block”. We will also be providing free parking passes to anyone driving to the GRAM.',
         latitude: 42.964103,
         longitude: -85.673271,
         show: false,
