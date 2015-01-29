@@ -1,36 +1,36 @@
 [{
   "name": "Eric Parrott",
   "pic": "./assets/img/eric-par.jpg",
-  "meet": "When the he came home from the hospital",
-  "xp": "Weekend in Colorado downhill mountain biking"
+  "meet": "When he came home from the hospital.",
+  "xp": "The weekend in Colorado we spent downhill mountain biking."
 },
   {
     "name": "Zak Tafelsky",
     "pic": "./assets/img/zak.jpg",
-    "meet": "At the VanAndel Public Museum for a birthday party",
+    "meet": "At the VanAndel Public Museum for a birthday party.",
     "xp": "Living together in a decrepit house and convincing all of our roommates that Oblivion is amazing."
   },
   {
     "name": "Ian Minter",
     "pic": "./assets/img/ian.jpg",
-    "meet": "At a his going away to Houston party (even though I never met him before and was just tagging along, come to find out he loves it when people do this)",
-    "xp": "Pedal Party Houston"
+    "meet": "At a his going away to Houston party (I had never met him before and was tagging along, come to find out he loves it when people do this).",
+    "xp": "Eloquently explaining various board games."
   },
   {
     "name": "Jordan Kokot",
     "pic": "./assets/img/jordan.jpg",
-    "meet": "Fourth grade, new kid introductions",
-    "xp": "Rampaging through Kamchatka due to previous transgressions"
+    "meet": "Fourth grade, new kid introductions.",
+    "xp": "All night benders of Risk, coffee, and political discourse."
   },
   {
     "name": "Eric Priestly",
     "pic": "./assets/img/eric-pre.jpg",
-    "meet": "Via window at Bubble Island",
-    "xp": "Late night bike rides through Ann Arbor"
+    "meet": "Via window at Bubble Island.",
+    "xp": "Late night bike rides around Ann Arbor ending in late-night Fleetwood."
   },
   {
     "name": "Nick Schneider",
     "pic": "./assets/img/nick.jpg",
-    "meet": "Gin's Graduation",
+    "meet": "Gin's Graduation.",
     "xp": "Denying Virginia countless board game wins through shared strategery."
   }]
