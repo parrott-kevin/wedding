@@ -19,6 +19,7 @@
         zip: '49503',
         link: 'http://www.artmuseumgr.org/',
         info: 'The ceremony will be taking place at the waterfall park at the GRAM and the reception will take place inside the GRAM main lobby.',
+        disclaimer: 'Reminder: The ceremony and reception is for adults only',
         latitude: 42.96505,
         longitude: -85.67105,
         show: false,

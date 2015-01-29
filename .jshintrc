@@ -84,7 +84,14 @@
 
     // Custom Globals
     "globals"       : {         // additional predefined global variables
-        "angular": false,
-        "$": false
-    }        
+      "angular": false,
+      "$": false,
+      "describe": false,
+      "it": false,
+      "expect": false,
+      "beforeEach": false,
+      "afterEach": false,
+      "module": false,
+      "inject": false
+    }
 }
