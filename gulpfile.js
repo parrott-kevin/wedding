@@ -46,7 +46,7 @@ gulp.task('watch', function() {
 });
 
 // Publish to Github Pages
-gulp.task('gh-pages', shell.task('git subtree push --prefix dist origin gh-pages'));
+//gulp.task('gh-pages', shell.task('git subtree push --prefix dist origin gh-pages'));
 
 //---------------------------------------------------------------------------//
 // Tasks for running dev
