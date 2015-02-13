@@ -11,11 +11,8 @@
       'wedding-party.controller'
     ])
     .constant('_', window._)
-    .run(function($rootScope, $location, $window) {
+    .run(function($rootScope) {
       $rootScope._ = window._;
-      $rootScope.$on('$routeChangeSuccess', function() {
-        $window._gaq.push(['_trackPageview', $location.path()]);
-      });
     });
 
 })();
