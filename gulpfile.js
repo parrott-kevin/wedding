@@ -4,7 +4,6 @@ var uglify = require('gulp-uglify');
 var minifyCss = require('gulp-minify-css');
 var del = require('del');
 var less = require('gulp-less');
-var shell = require('gulp-shell');
 var webserver = require('gulp-webserver');
 
 //---------------------------------------------------------------------------//
