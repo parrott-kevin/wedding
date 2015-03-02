@@ -30,6 +30,11 @@
           name: 'Etsy',
           pic: './assets/img/logo.etsy.png',
           link: 'https://www.etsy.com/registry/NDc2MTg1Mnw5MjM3OTYy/'
+        },
+        {
+          name: 'A Plus Store',
+          pic: './assets/img/logo.apr.png',
+          link: 'http://www.aplusrstore.com/wishlists/view/9779'
         }];
     }
 })();

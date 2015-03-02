@@ -13,10 +13,6 @@
     .constant('_', window._)
     .run(function($rootScope, $location, $window) {
       $rootScope._ = window._;
-      $rootScope.$on('$routeChangeSuccess', function() {
-        $window._gaq.push(['_trackPageView', $location.path()]);
-      });
-
     });
 
 })();
@@ -199,6 +195,11 @@
           name: 'Etsy',
           pic: './assets/img/logo.etsy.png',
           link: 'https://www.etsy.com/registry/NDc2MTg1Mnw5MjM3OTYy/'
+        },
+        {
+          name: 'A Plus Store',
+          pic: './assets/img/logo.apr.png',
+          link: 'http://www.aplusrstore.com/wishlists/view/9779'
         }];
     }
 })();
